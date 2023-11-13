@@ -15,18 +15,27 @@
             * would be nice if they are able to delete
         * Second half -> make the API call with the info from the form
      -->
+     <header>
+        <h1>Giphy Random Looker</h1>
+        <p>
+        During the first half of this assignment, any text that is
+        submitted will be pushed onto the results container.
+        The second half of the assignment will use an API to push a random
+        GIF into the container.
+        </p>
+     </header>
 
-    <div class="form">
-        <label for="search-topic" class="form-label">Search Topic</label>
-        <br>
-        <input type="text" class="form-input" id="search-topic">
-
-        <br>
-        <button class="submit btn" type="submit">Submit</button>
-    </div>
-    
-    <div class="resuts-container"></div>
-
+    <main>
+        <form method="" id="giphy-form">
+            <label for="search-topic" class="form-label">Search Topic</label>
+            <input type="text" class="form-input" id="search-topic">
+            <input type="submit">
+        </form>
+        <!-- 
+            * Results from the form will be added onto this container
+        -->
+        <div id="results"></div>
+    </main>
   <script src="./script.js" defer></script>
 </body>
 </html>
