@@ -9,26 +9,30 @@
 <body>
     <div class="wrapper">
     <div id="left-panel" class="panel">
-        <header>
-            <h1>Giphy Lookup</h1>
-            <p>culpa duis.</p>
-        </header>
-        <form>
-            <h3>Image Type</h3>
-            <input type="radio" id="img" name="image-type" value="image">
-            <label for="img">Image</label>
-
-            <input type="radio" id="stkr" name="image-type" value="sticker">
-            <label for="stkr">Sticker</label>
-
-            <h3><label for="query">Query</label></h3>
-            <input id="query" type="text" name="image-query" value="">
-
-            <h3><label for="offset">Offset</label></h3>
-            <input id="offset" type="range" name="image-offset" value="5" min="0" max="100" step="1">
-
-            <input type="submit" name="submit">
-        </form>
+        <div id="form-wrapper">
+            <header>
+                <h1>Giphy Lookup</h1>
+                <p>Look up any GIFs or Stickers from GIPHY using their API!</p>
+            </header>
+            <form>
+                <h3>Image Type</h3>
+                <div class="radio-container">
+                    <input type="radio" id="option-1" name="image-type" value="image" checked>
+                    <label class="option option-1" class="option" for="option-1"><span>Image</span></label>
+        
+                    <input type="radio" id="option-2" name="image-type" value="sticker">
+                    <label class="option option-2" class="option" for="option-2"><span>Sticker</span></label>
+                </div>
+    
+                <h3><label for="query">Query</label></h3>
+                <input id="query" type="text" name="image-query" value="" placeholder="Search for...">
+    
+                <h3><label for="offset">Offset</label></h3>
+                <input id="offset" type="range" name="image-offset" value="5" min="0" max="100" step="1">
+    
+                <input class="option" type="submit" name="submit">
+            </form>
+        </div>
     </div>
     <div id="right-panel" class="panel">
        <img id="mario-hover" src="mario-block.png" alt="mario question mark block" width="150"> 
