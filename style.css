@@ -1,33 +1,132 @@
 body {
-	padding: 20px 0;
+	margin: 0;
 }
 
-header h1 {
-	font-size: 1.8rem;
-}
-header p {
-	font-size: 1rem;
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }
 
-main, header {
-	width: 80%;
-	max-width: 1000px;
-	margin: 0 auto;
+/** MOBILE VIEW **/
+@media only screen and (max-width: 550px) {
+	.wrapper {
+		display: block;
+	}	
+	.panel {
+		width: 100%;
+		min-height: auto!important;
+	}
 }
 
-#giphy-form {
+.panel {
 	display: flex;
 	flex-direction: column;
-	row-gap: 15px;
+	justify-content: center;
+	padding: 20px 15px;
+	vertical-align: top;
+	box-sizing: border-box;
+	min-height: 100vh;
+}
+
+#left-panel { background-color: #FAFAFC;}
+
+#form-wrapper { 
+	padding: 35px 20px;
+}
+
+.radio-container {
+	display: flex;
 	align-items: center;
+	justify-content: center;
+	gap: 15px;
+}
+input[type="radio"] {
+	display: none;
+}
+.option {
+	background: #fff;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	border-radius: 5px;
+	cursor: pointer;
+	padding: 15px 10px;
+	border: 2px solid lightgrey;
+	transition: all 0.3s ease;
+}
+.option span{
+	font-size: 20px;
+	color: #808080;
+}
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span{
+	color: #fff;
+}
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2{
+  border-color: #0069d9;
+  background: #0069d9;
 }
 
-#giphy-form label {
-	font-size: 1.3rem;
+#query {
+	width: 100%;
+	padding: 15px 10px;
+	border: 2px solid lightgrey;
+	border-radius: 5px;
 }
 
-#results {
-	border: 2px solid black;
-	min-height: 450px;
-	margin-top: 25px;
+input[type="submit"] {
+	display: block;
+	background-color: #0069d9;
+	color: #fff;
+	font-weight: 600;
+	font-size: 1.1rem;
+	border-radius: 0;
+	padding: 15px 10px;
+	margin-top: 15px;
+	border: none;
+	border-radius: 5px;
 }
+
+input[type="submit"]:hover {
+	background-color: #0056b3;
+}
+
+input[type="range"] {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 15px;
+	border-radius: 5px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+}
+
+#right-panel {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	background: pink;
+}
+
+#mario-hover {
+	padding: 45px 0;
+	animation: float 3s ease-in-out infinite;
+    display: block;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+        filter: drop-shadow(0 5px 5px rgba(0,0,0,0.3));
+    }
+    50% {
+        transform: translateY(-20px);
+        filter: drop-shadow(0 15px 15px rgba(0,0,0,0.2));
+    }
+}
+
