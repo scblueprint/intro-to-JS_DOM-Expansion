@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Website</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <div class="wrapper">
@@ -25,7 +26,7 @@
                 </div>
     
                 <h3><label for="query">Query</label></h3>
-                <input id="query" type="text" name="image-query" value="" placeholder="Search for...">
+                <input required id="query" type="text" name="image-query" value="" placeholder="Search for...">
     
                 <h3><label for="offset">Offset</label></h3>
                 <input id="offset" type="range" name="image-offset" value="5" min="0" max="100" step="1">
@@ -35,7 +36,7 @@
         </div>
     </div>
     <div id="right-panel" class="panel">
-       <img id="mario-hover" src="mario-block.png" alt="mario question mark block" width="150"> 
+       <img id="mario-hover" src="mario-block.png" alt="mario question mark block"> 
     </div>
         </div>
 </body>

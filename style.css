@@ -113,6 +113,10 @@ input[type="range"] {
 	background: pink;
 }
 
+img {
+	width: 150px;
+}
+
 #mario-hover {
 	padding: 45px 0;
 	animation: float 3s ease-in-out infinite;
